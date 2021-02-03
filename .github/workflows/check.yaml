@@ -12,4 +12,4 @@ jobs:
         uses: JJ/github-pr-contains-action@releases/v0
         with:
           github-token: ${{ github.token }}
-          diffContains: 'Test'
+          bodyContains: ['// Use of this source code is governed by the Apache License, Version 2.0 \n// that can be found in the LICENSE file.\n\n']
