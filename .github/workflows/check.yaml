@@ -12,6 +12,9 @@ jobs:
     runs-on: macOS-latest
     timeout-minutes: 60
     steps:
-      - name: Step 1
-        run: echo 'Okay'
+    - name: Check PR
+      uses: JJ/github-pr-contains-action@releases/v0
+      with:
+        github-token: ${{github.token}}
+        bodyContains: 'dota2'
 
