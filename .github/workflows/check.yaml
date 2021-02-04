@@ -25,4 +25,5 @@ jobs:
           files: ${{ steps.get_changed_files.outputs.added_modified }}
       - name: Check
         if: "contains(steps.read_migration_files.outputs.content, 'test string')"
+        run: echo working
 
