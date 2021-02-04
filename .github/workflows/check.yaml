@@ -1,7 +1,7 @@
 name: Check License Lines
 on:
   pull_request:
-    branches: [master]
+    types: [opened, edited, synchronize]
 jobs:
   check-license-lines:
     runs-on: macOS-latest
