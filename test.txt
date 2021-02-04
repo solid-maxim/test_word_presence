@@ -1,3 +1,15 @@
 Test
 
 dsa
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+          ref: ${{ github.ref }}
+      - name: Get changed files
+        uses: lots0logs/gh-action-get-changed-files@2.1.4
+        id: get_changed_files
+        with:
+          token: "${{secrets.GITHUB_TOKEN}}"
+      - name: Check
+        run: echo ${{ steps.read_migration_files.outputs.content }}
