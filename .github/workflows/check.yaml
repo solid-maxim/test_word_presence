@@ -1,9 +1,10 @@
 name: check-word-presence
 
-on: pull_request
-  paths:
-    - '**.js'
-    - '**.dart'
+on: 
+  pull_request:
+    paths:
+      - '**.js'
+      - '**.dart'
 
 jobs:
   check:
