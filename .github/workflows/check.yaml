@@ -18,11 +18,6 @@ jobs:
         id: get_changed_files
         with:
           token: "${{secrets.GITHUB_TOKEN}}"
-      - name: Read files action
-        uses: komorebitech/read-files-action@v1.5
-        id: read_migration_files
-        with:
-          files: ${{ steps.get_changed_files.outputs.added_modified }}
       - name: Check
         if: "contains(steps.read_migration_files.outputs.content, 'test string')"
         run: echo working
