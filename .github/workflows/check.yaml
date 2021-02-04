@@ -20,5 +20,5 @@ jobs:
           token: "${{secrets.GITHUB_TOKEN}}"
       - name: Check
         if: "contains(steps.read_migration_files.outputs.content, 'test string')"
-        run: echo working
+        run: echo ${{ steps.read_migration_files.outputs.content }}
 
