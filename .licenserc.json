@@ -4,6 +4,6 @@
     "// License text"
   ],
   "ignore": [
-    "ignore/"
+    "ignore/**/*.dart"
   ]
 }
